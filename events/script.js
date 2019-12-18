@@ -184,6 +184,7 @@
 var elixirCounter = 0;
 var electrifyCounter = 0;
 var specialCounter = 0;
+var featuredCounter = 0;
 
 $(document).ready(function(){
     $('.robo-official-slider-for').slick({
@@ -212,6 +213,36 @@ $(document).ready(function(){
         slidesToShow: 3,
         slidesToScroll: 1,
         asNavFor: '.design-build-slider-for',
+        autoplay: true,
+        autoplaySpeed: 2000,
+        dots: true
+      });
+      $('.prog-inc-slider-for').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        fade: true,
+        asNavFor: '.prog-inc-slider-nav'
+      });
+      $('.prog-inc-slider-nav').slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        asNavFor: '.prog-inc-slider-for',
+        autoplay: true,
+        autoplaySpeed: 2000,
+        dots: true
+      });
+      $('.corporate-slider-for').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        fade: true,
+        asNavFor: '.corporate-slider-nav'
+      });
+      $('.corporate-slider-nav').slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        asNavFor: '.corporate-slider-for',
         autoplay: true,
         autoplaySpeed: 2000,
         dots: true
@@ -249,10 +280,49 @@ $(document).ready(function(){
         $("#card-text-special").text("School Bag");
         $("#card-image-special").attr("src", "images/schoolbag.jpg");
     });
+
+    $("#cubix").on("click", function(){
+        $("#card-text-featured").text("Cubix");
+        $("#card-image-featured").attr("src", "images/cubix.jpg");
+    });
+
+    $("#matka").on("click", function(){
+        $("#card-text-featured").text("Matka");
+        $("#card-image-featured").attr("src", "images/matka.jpg");
+    });
+
+    $("#idrl").on("click", function(){
+        $("#card-text-featured").text("Indian Drone Racing League");
+        $("#card-image-featured").attr("src", "images/idrl.jpg");
+    });
+
+
     setInterval(elixirHandler, 5000);
     setInterval(electrifyHandler, 5000);
     setInterval(specialsHandler, 5000);
+    setInterval(featuredHandler, 5000);
 })
+
+function featuredHandler(){
+    if(featuredCounter === 0){
+        $("#card-text-featured").text("Cubix");
+        $("#card-image-featured").attr("src", "images/cubix.jpg");
+        featuredCounter = 1;
+    }
+    else{
+        if(featuredCounter === 1){
+            $("#card-text-featured").text("Matka");
+            $("#card-image-featured").attr("src", "images/matka.jpg");
+            featuredCounter = 2;
+        }
+        else{
+            $("#card-text-featured").text("Indian Drone Racing League");
+            $("#card-image-featured").attr("src", "images/idrl.jpg");
+            featuredCounter = 0;
+        }
+    }
+}
+
 
 function elixirHandler(){
     if(elixirCounter===0){
