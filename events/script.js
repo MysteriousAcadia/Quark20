@@ -181,58 +181,120 @@
 //
 // var paragraphText = '<p>Somebody once told me the world is gonna roll me. I ain\'t the sharpest tool in the shed. She was looking kind of dumb with her finger and her thumb in the shape of an "L" on her forehead. Well the years start coming and they don\'t stop coming. Fed to the rules and I hit the ground running. Didn\'t make sense not to live for fun. Your brain gets smart but your head gets dumb. So much to do, so much to see. So what\'s wrong with taking the back streets? You\'ll never know if you don\'t go. You\'ll never shine if you don\'t glow.</p><p>Hey now, you\'re an all-star, get your game on, go play. Hey now, you\'re a rock star, get the show on, get paid. And all that glitters is gold. Only shooting stars break the mold.</p><p>It\'s a cool place and they say it gets colder. You\'re bundled up now, wait till you get older. But the meteor men beg to differ. Judging by the hole in the satellite picture. The ice we skate is getting pretty thin. The water\'s getting warm so you might as well swim. My world\'s on fire, how about yours? That\'s the way I like it and I never get bored.</p>';
 // $('.elixirHead').onmouseover().css("display","block");
+var elixirCounter = 0;
+var electrifyCounter = 0;
+var specialCounter = 0;
 
-$('.elixirHead').hover(function(){
-  // alert("You entered p1!");
-  $('div.elixir1').addClass('permaHover');
+$(document).ready(function(){
+    $('.robo-official-slider-for').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        fade: true,
+        asNavFor: '.robo-official-slider-nav'
+      });
+      $('.robo-official-slider-nav').slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        asNavFor: '.robo-official-slider-for',
+        autoplay: true,
+        autoplaySpeed: 2000,
+        dots: true
+      });
+      $('.design-build-slider-for').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        fade: true,
+        asNavFor: '.design-build-slider-nav'
+      });
+      $('.design-build-slider-nav').slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        asNavFor: '.design-build-slider-for',
+        autoplay: true,
+        autoplaySpeed: 2000,
+        dots: true
+      });
+    $("#quark-national-quiz").on("click", function(){
+        $("#card-text-elixir").text("Quark National Quiz");
+        $("#card-image-elixir").attr("src", "images/qnq.jpg");
+    });
+    $("#ganimatooonics").on("click", function(){
+        $("#card-text-elixir").text("Ganimatooonics");
+        $("#card-image-elixir").attr("src", "images/ganimatooonics.jpg");
+    });
+
+    $("#digilogica").on("click", function(){
+        $("#card-text-electrify").text("Digilogica");
+        $("#card-image-electrify").attr("src", "images/digilogica.gif");
+    });
+
+    $("#μcmania").on("click", function(){
+        $("#card-text-electrify").text("μC Mania");
+        $("#card-image-electrify").attr("src", "images/ucmania.jpg");
+    });
+
+    $("#openshowcase").on("click", function(){
+        $("#card-text-special").text("Open Showcase");
+        $("#card-image-special").attr("src", "images/openshowcase.jpg");
+    });
+
+    $("#paperpresentation").on("click", function(){
+        $("#card-text-special").text("Paper Presentation");
+        $("#card-image-special").attr("src", "images/paperpresentation.jpg");
+    });
+
+    $("#schoolbag").on("click", function(){
+        $("#card-text-special").text("School Bag");
+        $("#card-image-special").attr("src", "images/schoolbag.jpg");
+    });
+    setInterval(elixirHandler, 5000);
+    setInterval(electrifyHandler, 5000);
+    setInterval(specialsHandler, 5000);
 })
 
-$('.roboficialHead').hover(function(){
-  // alert("You entered p1!");
-  $('div.roboficial1').addClass('permaHover');
-})
+function elixirHandler(){
+    if(elixirCounter===0){
+        $("#card-text-elixir").text("Quark National Quiz");
+        $("#card-image-elixir").attr("src", "images/qnq.jpg");
+        elixirCounter=1;
+    }
+    else{
+        $("#card-text-elixir").text("Ganimatooonics");
+        $("#card-image-elixir").attr("src", "images/ganimatooonics.jpg");
+        elixirCounter=0;
+    }
+}
 
-$('.specialHead').hover(function(){
-  // alert("You entered p1!");
-  $('div.special1').addClass('permaHover');
-})
+function electrifyHandler(){
+    if(electrifyCounter===0){
+        $("#card-text-electrify").text("Digilogica");
+        $("#card-image-electrify").attr("src", "images/digilogica.gif");
+        electrifyCounter=1;
+    }
+    else{
+        $("#card-text-electrify").text("μC Mania");
+        $("#card-image-electrify").attr("src", "images/ucmania.jpg");
+        electrifyCounter=0;
+    }
+}
 
-$('.desHead').hover(function(){
-  // alert("You entered p1!");
-  $('div.des1').addClass('permaHover');
-})
-
-$('.electrifyHead').hover(function(){
-  // alert("You entered p1!");
-  $('div.electrify1').addClass('permaHover');
-})
-
-$('.proHead').hover(function(){
-  // alert("You entered p1!");
-  $('div.pro1').addClass('permaHover');
-})
-
-$('.corHead').hover(function(){
-  // alert("You entered p1!");
-  $('div.cor1').addClass('permaHover');
-})
-
-$('.matkaHead').hover(function () {
-  // alert("You entered p1!");
-  $('div.matka1').addClass('permaHover');
-})
-
-$('.cubixHead').hover(function () {
-  // alert("You entered p1!");
-  $('div.cubix1').addClass('permaHover');
-})
-
-$('.idrlHead').hover(function () {
-  // alert("You entered p1!");
-  $('div.idrl1').addClass('permaHover');
-})
-
-$('.shutterupHead').hover(function () {
-  // alert("You entered p1!");
-  $('div.shutterup1').addClass('permaHover');
-})
+function specialsHandler(){
+    if(specialCounter===0){
+        $("#card-text-special").text("Open Showcase");
+        $("#card-image-special").attr("src", "images/openshowcase.jpg");
+        specialCounter=1;
+    }
+    else{
+        if(specialCounter===1){
+            $("#card-text-special").text("Paper Presentation");
+            $("#card-image-special").attr("src", "images/paperpresentation.jpg");
+            specialCounter=2;
+        }else{
+            $("#card-text-special").text("School Bag");
+            $("#card-image-special").attr("src", "images/schoolbag.jpg");
+            specialCounter=0;
+        }
+    }
+}
