@@ -34,107 +34,21 @@
 </head>
 
 <body style="background-color: black;">
+<img src="./img/Quark Logo Refurnished (1).png", style="position: absolute;top: 0;left: 0;margin: 1%;z-index: 2; width: 5%;"/>
 
-  <!-- Navbar -->
-  <nav class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar">
-    <div class="container">
-      <a class="navbar-brand" href="#" target="_blank">
-        <strong>Phasing Through Eons</strong>
-      </a>
+  <div class="view" style="position: relative;">
+              
+              <img src="./img/logo.png" style="position: absolute;top:0;left: 100; z-index:2;" style="margin-left: auto; margin-right: auto ;width: 50%;">
+              <img src="./img/source.gif",style="position:absolute;object-fit: fill;" width="100%">
 
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-
-        <ul class="navbar-nav mr-auto">
-          </li>
-          <li class="nav-item">
-          </li>
-          <li class="nav-item">
-          </li>
-          <li class="nav-item">
-          </li>
-        </ul>
-
-        <!-- Right -->
-        <ul class="navbar-nav nav-flex-icons">
-
-          <li class="nav-item active">
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./events/index.html">Events</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./register.html" target="_blank">Register Here!</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="https://bits-quark.org/bitshack/" target="_blank">Bits-Hack!</a>
-          </li>
-
-        </ul>
-
-      </div>
-
-    </div>
-  </nav>
-  <!-- Navbar -->
-
-
-  <div class="view">
-            <video class="video-intro" autoplay muted height="100%" id="mainVideo" style="background-color: black;">
-            <source src="./Quark Theme Animation [DoPy]_1.mp4" type="video/mp4" style="position: absolute;z-index: 1;"> </video>
-              <div class="view" style="position: relative; background-color: black;" id="afterVideo">
-              <img src="VJC.gif",style="object-fit: fill;" width="100%">
-              <img src="./img/logo.png",style="margin:auto;position:absolute;z-index:2;" width="50%">
               <i class="fa fa-chevron-left" style="font-size:48px;position:absolute; margin: 1%; left:0;bottom:0;z-index: 2;color: white;"></i>
               <i class="fa fa-chevron-right" style="font-size:48px;position:absolute; margin:1%;right:0;bottom:0;z-index: 2;color: white;"></i>
 
-              </div>
-
             
   </div>
-  <script type='text/javascript'>
-    document.getElementById('mainVideo').addEventListener('ended',myHandler,false);
-    function myHandler(e) {
-//       $(document).ready(function(){
-        
-//         $.when($("#mainVideo").fadeOut())
-//                                .done(function() {
-//                                  $("#mainVideo").remove();
-//                                  $("#afterVideo").fadeIn();
-// });
-// });
-        fade(document.getElementById('mainVideo'));
-        unfade(document.getElementById('afterVideo'));
-    }
-    function fade(element) {
-    var op = 1;  // initial opacity
-    var timer = setInterval(function () {
-        if (op <= 0.1){
-            clearInterval(timer);
-            element.style.display = 'none';
-        }
-        element.style.opacity = op;
-        element.style.filter = 'alpha(opacity=' + op * 100 + ")";
-        op -= op * 0.1;
-    }, 50);
-}
-function unfade(element) {
-    var op = 0.1;  // initial opacity
-    element.style.display = 'block';
-    var timer = setInterval(function () {
-        if (op >= 1){
-            clearInterval(timer);
-        }
-        element.style.opacity = op;
-        element.style.filter = 'alpha(opacity=' + op * 100 + ")";
-        op += op * 0.01;
-    }, 10);
-}
-</script>
+  <i class="fa fa-diamond" style="position:absolute; left:0; right:0;bottom:0;z-index: 2;font-size:48px;color:white"></i>
+
+  
 
   <footer class="page-footer text-center font-small mt-4 fadeIn">
     <hr class="my-4">
