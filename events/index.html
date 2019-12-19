@@ -1,328 +1,390 @@
 <!DOCTYPE html>
 <html lang="en" >
-<head>
-  <meta charset="UTF-8">
-  <title>Expanding card page transition effect</title>
-  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css"> -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
-  <script src="https://kit.fontawesome.com/9ef5074be5.js" crossorigin="anonymous"></script>
+  <head>
+    <meta charset="UTF-8">
+    <title>Events | Quark</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+    <script src="https://kit.fontawesome.com/9ef5074be5.js" crossorigin="anonymous"></script>
+    <!-- Add the slick-theme.css if you want default styling -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <!-- Add the slick-theme.css if you want default styling -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+    <script
+    src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8="
+    crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./style.css">
+  </head>
 
-  <script
-  src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-  integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8="
-  crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="./style.css">
-
-</head>
-<body>
-
-
-<!-- partial:index.partial.html -->
-<!--
-  Please note: this code is in no way ready to be used as is in production on your website. It will need to be adapted to be cross browser compliant & accessible. I just wanted to share how one might go about this effect with CSS & JS and no other dependencies
--->
-<h1 style="color: yellow;font-size: 70px; padding: 60px 0px; text-align: center">EVENTS</h1>
+  <body>
 
 
-<div class="container elixir1">
-  <span><h1 style="color: pink;font-size: 40px;" class='elixirHead'>ELIXIR</h1></span>
-  <div class="card-column elixir">
-    <div class="card card-color-0">
-      <div class="border"></div>
-      <img src="./img/ganimatooonics.jpg" />
-      <h2>Ganimatoonics</h2>
+    <div class="section">
+        <div style="height: 100%;display: flex;justify-content: center; align-items: center;">
+          <img src="quark_logo.png">
+        </div>
+        <a href="#robo-official">
+          <div id="lead-down" class="text-center" style="color: white !important; position: absolute;
+          bottom: 0;width: 100%;">
+              <h1>Discover More</h1>
+              <span>
+                  <i class="fa fa-chevron-down fa-2x" aria-hidden="true"></i>
+              </span>
+          </div>
+        </a>
+        <div style="position: absolute; top: 0; right: 0; margin-right: 3%; margin-top: 2%;">
+          <a href="../register.html" class="btn btn-outline-success">Register Now</a>
+                        <a href="https://drive.google.com/file/d/0B_Q2Az3l_CIBTW51SERCbklxOTllNFdsaFpZemdxdm9NN0N3/view?usp=sharing" class="btn btn-success">Get RuleBook</a>
+        </div>
     </div>
-    <div class="card card-color-2">
-      <div class="border"></div>
-      <img src="./img/qnq.jpg" />
-      <h2>Quark National Quiz</h2>
+
+    <div id="robo-official" class="sub-section">
+      <div class="text-center" style="font-size: 4em;">ROBO OFFICIAL</div>
+      <div class="card ml-auto mr-auto" style="width:50%;margin-bottom: 3%; height: 60%;">  
+          <div class="robo-official-slider-for">
+            <div class="card-body text-center">
+              <img src="images/robowars.jpg" class="card-img-top" style="max-height: 25rem;min-height: 25rem;">
+              <br><br>
+              <p class="card-text">RoboWars</p>
+              <a href="../register.html" class="btn btn-outline-success">Register Now</a>
+                            <a href="https://drive.google.com/file/d/0B_Q2Az3l_CIBTW51SERCbklxOTllNFdsaFpZemdxdm9NN0N3/view?usp=sharing" class="btn btn-success">Get RuleBook</a>
+            </div>
+            <div class="card-body text-center">
+              <img src="images/roborace.jpg" class="card-img-top" style="max-height: 25rem;min-height: 25rem;">
+              <br><br>
+              <p class="card-text">RoboRace</p>
+              <a href="../register.html" class="btn btn-outline-success">Register Now</a>
+                            <a href="https://drive.google.com/file/d/0B_Q2Az3l_CIBTW51SERCbklxOTllNFdsaFpZemdxdm9NN0N3/view?usp=sharing" class="btn btn-success">Get RuleBook</a>
+            </div>
+            <div class="card-body text-center">
+              <img src="images/robosoccer.jpg" class="card-img-top" style="max-height: 25rem;min-height: 25rem;">
+              <br><br>
+              <p class="card-text">Robo Soccer</p>
+              <a href="../register.html" class="btn btn-outline-success">Register Now</a>
+                            <a href="https://drive.google.com/file/d/0B_Q2Az3l_CIBTW51SERCbklxOTllNFdsaFpZemdxdm9NN0N3/view?usp=sharing" class="btn btn-success">Get RuleBook</a>
+            </div>
+            <div class="card-body text-center">
+              <img src="images/roboclench.png" class="card-img-top" style="max-height: 25rem;min-height: 25rem;">
+              <br><br>
+              <p class="card-text">Robo Clench</p>
+              <a href="../register.html" class="btn btn-outline-success">Register Now</a>
+              <a href="https://drive.google.com/file/d/0B_Q2Az3l_CIBTW51SERCbklxOTllNFdsaFpZemdxdm9NN0N3/view?usp=sharing" class="btn btn-success">Get RuleBook</a>
+            </div>
+            <div class="card-body text-center">
+              <img src="images/mazerunner.jpg" class="card-img-top" style="max-height: 25rem;min-height: 25rem;">
+              <br><br>
+              <p class="card-text">Maze Runner</p>
+              <a href="../register.html" class="btn btn-outline-success">Register Now</a>
+              <a href="https://drive.google.com/file/d/0B_Q2Az3l_CIBTW51SERCbklxOTllNFdsaFpZemdxdm9NN0N3/view?usp=sharing" class="btn btn-success">Get RuleBook</a>
+            </div>
+            <div class="card-body text-center">
+              <img src="images/timechallenge.jpg" class="card-img-top" style="max-height: 25rem;min-height: 25rem;">
+              <br><br>
+              <p class="card-text">Time Challenge</p>
+              <a href="../register.html" class="btn btn-outline-success">Register Now</a>
+              <a href="https://drive.google.com/file/d/0B_Q2Az3l_CIBTW51SERCbklxOTllNFdsaFpZemdxdm9NN0N3/view?usp=sharing" class="btn btn-success">Get RuleBook</a>
+            </div>
+          </div>
+      </div>
+      <div class="robo-official-slider-nav text-center ml-auto mr-auto" style="width:50%;">
+          <div class="card" style="width: 18rem;">
+            <img src="images/robowars.jpg" class="card-img-top" style="min-height: 12rem; max-height: 12rem;">
+          </div>
+          <div class="card" style="width: 18rem;">
+            <img src="images/roborace.jpg" class="card-img-top" style="min-height: 12rem; max-height: 12rem;">
+          </div>
+          <div class="card" style="width: 18rem;">
+            <img src="images/robosoccer.jpg" class="card-img-top" style="min-height: 12rem; max-height: 12rem;">
+          </div>
+          <div class="card" style="width: 18rem;">
+            <img src="images/roboclench.png" class="card-img-top" style="min-height: 12rem; max-height: 12rem;">
+          </div>
+          <div class="card" style="width: 18rem;">
+            <img src="images/mazerunner.jpg" class="card-img-top" style="min-height: 12rem; max-height: 12rem;">
+          </div>
+          <div class="card" style="width: 18rem;">
+            <img src="images/timechallenge.jpg" class="card-img-top" style="min-height: 12rem; max-height: 12rem;">
+          </div>
+      </div>
     </div>
-  </div>
-  
-</div>
-
-
-<div class="container roboficial1">
-  <h1 style="color: pink;font-size: 40px;" class='roboficialHead'>ROBOFICIAL</h1>
-  <div class="card-column column-0 roboficial">
-    <div class="card card-color-0">
-      <div class="border"></div>
-      <img src="./img/Robowars.jpg" />
-      <h2>RoboWars</h2>
+    
+    <div id="elixir" class="sub-section">
+      <div class="text-center" style="font-size: 4em;">ELIXIR</div>
+      <div class="card ml-auto mr-auto" style="width:50%;margin-bottom: 3%; height: 60%;">
+          <div class="card-body text-center">
+            <img src="images/qnq.jpg" class="card-img-top" id="card-image-elixir" style="height:25rem;min-height: 25rem; max-height: 25rem;">
+            <br><br>
+            <p class="card-text" id="card-text-elixir">Quark National Quiz </p>
+            <a href="../register.html" class="btn btn-outline-success">Register Now</a>
+                          <a href="https://drive.google.com/file/d/0B_Q2Az3l_CIBTW51SERCbklxOTllNFdsaFpZemdxdm9NN0N3/view?usp=sharing" class="btn btn-success">Get RuleBook</a>
+          </div>
+      </div>
+      <div style="display: flex;justify-content: center; align-items: center;">
+        <div class="card" style="width: 18rem;">
+          <img src="images/qnq.jpg" id="quark-national-quiz" class="card-img-top" alt="...">
+        </div>
+        <div class="card" style="width: 18rem;">
+          <img src="images/ganimatooonics.jpg" id="ganimatooonics" class="card-img-top" alt="...">
+        </div>
+      </div>
     </div>
-    <div class="card card-color-2">
-      <div class="border"></div>
-      <img src="./img/Robo Soccer.jpg" />
-      <h2>RoboSoccer</h2>
+
+    <div id="design-build" class="sub-section">
+      <div class="text-center" style="font-size: 4em;">DESIGN & BUILD</div>
+        <div class="card ml-auto mr-auto" style="width:50%;margin-bottom: 3%; height: 60%;">  
+          <div class="design-build-slider-for">
+            <div class="card-body text-center">
+              <img src="images/searchandrescue.jpg" class="card-img-top" style="max-height: 25rem;min-height: 25rem;">
+              <br><br>
+              <p class="card-text">Search and Rescue</p>
+              <a href="../register.html" class="btn btn-outline-success">Register Now</a>
+                            <a href="https://drive.google.com/file/d/0B_Q2Az3l_CIBTW51SERCbklxOTllNFdsaFpZemdxdm9NN0N3/view?usp=sharing" class="btn btn-success">Get RuleBook</a>
+            </div>
+            <div class="card-body text-center">
+              <img src="images/mortarkombat.jpg" class="card-img-top" style="max-height: 25rem;min-height: 25rem;">
+              <br><br>
+              <p class="card-text">Mortal Kombat</p>
+              <a href="../register.html" class="btn btn-outline-success">Register Now</a>
+                            <a href="https://drive.google.com/file/d/0B_Q2Az3l_CIBTW51SERCbklxOTllNFdsaFpZemdxdm9NN0N3/view?usp=sharing" class="btn btn-success">Get RuleBook</a>
+            </div>
+            <div class="card-body text-center">
+              <img src="images/trailblazers.jpg" class="card-img-top" style="max-height: 25rem;min-height: 25rem;">
+              <br><br>
+              <p class="card-text">Trailblazers</p>
+              <a href="../register.html" class="btn btn-outline-success">Register Now</a>
+                            <a href="https://drive.google.com/file/d/0B_Q2Az3l_CIBTW51SERCbklxOTllNFdsaFpZemdxdm9NN0N3/view?usp=sharing" class="btn btn-success">Get RuleBook</a>
+            </div>
+            <div class="card-body text-center">
+              <img src="images/burnout.jpg" class="card-img-top" style="max-height: 25rem;min-height: 25rem;">
+              <br><br>
+              <p class="card-text">Burnout</p>
+              <a href="../register.html" class="btn btn-outline-success">Register Now</a>
+                            <a href="https://drive.google.com/file/d/0B_Q2Az3l_CIBTW51SERCbklxOTllNFdsaFpZemdxdm9NN0N3/view?usp=sharing" class="btn btn-success">Get RuleBook</a>
+            </div>
+          </div>
+        </div>
+        <div class="design-build-slider-nav text-center ml-auto mr-auto" style="width:50%;">
+            <div class="card" style="width: 18rem;">
+              <img src="images/searchandrescue.jpg" class="card-img-top" style="min-height: 12rem; max-height: 12rem;">
+            </div>
+            <div class="card" style="width: 18rem;">
+              <img src="images/mortarkombat.jpg" class="card-img-top" style="min-height: 12rem; max-height: 12rem;">
+            </div>
+            <div class="card" style="width: 18rem;">
+              <img src="images/trailblazers.jpg" class="card-img-top" style="min-height: 12rem; max-height: 12rem;">
+            </div>
+            <div class="card" style="width: 18rem;">
+              <img src="images/burnout.jpg" class="card-img-top" style="min-height: 12rem; max-height: 12rem;">
+            </div>
+        </div>
     </div>
-    <div class="card card-color-1">
-      <div class="border"></div>
-      <img src="./img/Roborace.jpg" />
-      <h2>RoboRace</h2>
+
+    <div id="electrify" class="sub-section">
+      <div class="text-center" style="font-size: 4em;">ELECTRIFY</div>
+      <div class="card ml-auto mr-auto" style="width:50%;margin-bottom: 3%; height: 60%;">
+          <div class="card-body text-center">
+            <img src="images/ucmania.jpg" class="card-img-top" id="card-image-electrify" style="max-height: 25rem;min-height: 25rem;">
+            <br><br>
+            <p class="card-text" id="card-text-electrify">μC Mania</p>
+            <a href="../register.html" class="btn btn-outline-success">Register Now</a>
+                          <a href="https://drive.google.com/file/d/0B_Q2Az3l_CIBTW51SERCbklxOTllNFdsaFpZemdxdm9NN0N3/view?usp=sharing" class="btn btn-success">Get RuleBook</a>
+          </div>
+      </div>
+      <div style="display: flex;justify-content: center; align-items: center;">
+        <div class="card" style="width: 18rem;">
+          <img src="images/ucmania.jpg" id="μcmania" class="card-img-top" style="min-height: 12rem;" alt="...">
+        </div>
+        <div class="card" style="width: 18rem;">
+          <img src="images/digilogica.gif" id="digilogica" style="min-height: 12rem;" class="card-img-top" alt="...">
+        </div>
+      </div>
     </div>
-    <div class="card card-color-3">
-      <div class="border"></div>
-      <img src="./img/Line following Bot.jpg" />
-      <h2>Line Following Bot</h2>
+    
+    <div id="pgrms-inc" class="sub-section">
+      <div class="text-center" style="font-size: 4em;">PROGRAMMERS INC</div>
+      <div class="card ml-auto mr-auto" style="width:50%;margin-bottom: 3%; height: 60%;">  
+          <div class="prog-inc-slider-for">
+            <div class="card-body text-center">
+              <img src="images/hackathon.jpg" class="card-img-top" style="max-height: 25rem;min-height: 25rem;">
+              <br><br>
+              <p class="card-text">Hackathon</p>
+              <a href="../register.html" class="btn btn-outline-success">Register Now</a>
+                            <a href="https://drive.google.com/file/d/0B_Q2Az3l_CIBTW51SERCbklxOTllNFdsaFpZemdxdm9NN0N3/view?usp=sharing" class="btn btn-success">Get RuleBook</a>
+            </div>
+            <div class="card-body text-center">
+              <img src="images/codejam.jpg" class="card-img-top" style="max-height: 25rem;min-height: 25rem;">
+              <br><br>
+              <p class="card-text">Code Jam</p>
+              <a href="../register.html" class="btn btn-outline-success">Register Now</a>
+                            <a href="https://drive.google.com/file/d/0B_Q2Az3l_CIBTW51SERCbklxOTllNFdsaFpZemdxdm9NN0N3/view?usp=sharing" class="btn btn-success">Get RuleBook</a>
+            </div>
+            <div class="card-body text-center">
+              <img src="images/capturetheflag.jpg" class="card-img-top" style="max-height: 25rem;min-height: 25rem;">
+              <br><br>
+              <p class="card-text">Capture The Flag</p>
+              <a href="../register.html" class="btn btn-outline-success">Register Now</a>
+                            <a href="https://drive.google.com/file/d/0B_Q2Az3l_CIBTW51SERCbklxOTllNFdsaFpZemdxdm9NN0N3/view?usp=sharing" class="btn btn-success">Get RuleBook</a>
+            </div>
+            <div class="card-body text-center">
+              <img src="images/reversecoding.jpg" class="card-img-top" style="max-height: 25rem;min-height: 25rem;">
+              <br><br>
+              <p class="card-text">Reverse Coding</p>
+              <a href="../register.html" class="btn btn-outline-success">Register Now</a>
+                            <a href="https://drive.google.com/file/d/0B_Q2Az3l_CIBTW51SERCbklxOTllNFdsaFpZemdxdm9NN0N3/view?usp=sharing" class="btn btn-success">Get RuleBook</a>
+            </div>
+          </div>
+      </div>
+      <div class="prog-inc-slider-nav text-center ml-auto mr-auto" style="width:50%;">
+          <div class="card" style="width: 18rem;">
+            <img src="images/hackathon.jpg" class="card-img-top" style="min-height: 12rem; max-height: 12rem;">
+          </div>
+          <div class="card" style="width: 18rem;">
+            <img src="images/codejam.jpg" class="card-img-top" style="min-height: 12rem; max-height: 12rem;">
+          </div>
+          <div class="card" style="width: 18rem;">
+            <img src="images/capturetheflag.jpg" class="card-img-top" style="min-height: 12rem; max-height: 12rem;">
+          </div>
+          <div class="card" style="width: 18rem;">
+            <img src="images/reversecoding.jpg" class="card-img-top" style="min-height: 12rem; max-height: 12rem;">
+          </div>
+      </div>
     </div>
-    <div class="card card-color-0">
-      <div class="border"></div>
-      <img src="./img/RoboClench.png " />
-      <h2>RoboClench</h2>
+
+    <div id="specials" class="sub-section">
+      <div class="text-center" style="font-size: 4em;">SPECIALS</div>
+      <div class="card ml-auto mr-auto" style="width:50%;margin-bottom: 3%; height: 60%;">
+          <div class="card-body text-center">
+            <img src="images/openshowcase.jpg" class="card-img-top" id="card-image-special" style="max-height: 25rem; min-height: 25rem;">
+            <br><br>
+            <p class="card-text" id="card-text-special">Open Showcase</p>
+            <a href="../register.html" class="btn btn-outline-success">Register Now</a>
+                          <a href="https://drive.google.com/file/d/0B_Q2Az3l_CIBTW51SERCbklxOTllNFdsaFpZemdxdm9NN0N3/view?usp=sharing" class="btn btn-success">Get RuleBook</a>
+          </div>
+      </div>
+      <div style="display: flex;justify-content: center; align-items: center;">
+        <div class="card" style="width: 18rem;">
+          <img src="images/openshowcase.jpg" id="openshowcase" class="card-img-top" style="min-height: 12rem;max-height: 12rem;" alt="...">
+        </div>
+        <div class="card" style="width: 18rem;">
+          <img src="images/paperpresentation.jpg" id="paperpresentation" style="min-height: 12rem;max-height: 12rem;" class="card-img-top" alt="...">
+        </div>
+        <div class="card" style="width: 18rem;">
+          <img src="images/schoolbag.jpg" id="schoolbag" style="min-height: 12rem;max-height: 12rem;" class="card-img-top" alt="...">
+        </div>
+      </div>
     </div>
-  </div>
-</div>
-
-
-
-<div class="container pro1">
-  <h1 style="color: pink;font-size: 40px;"  class='proHead'>PROGRAMMERS INC.</h1>
-  <div class="card-column column-0 pro">
-    <div class="card card-color-0">
-      <div class="border"></div>
-      <img src="./img/hackathon.jpg" />
-      <h2>Hackathon</h2>
+    
+    <div id="corporate" class="sub-section">
+      <div class="text-center" style="font-size: 4em;">CORPORATE</div>
+      <div class="card ml-auto mr-auto" style="width:50%;margin-bottom: 3%; height: 60%;">  
+          <div class="corporate-slider-for">
+            <div class="card-body text-center">
+              <img src="images/marketkshetra.jpg" class="card-img-top" style="max-height: 25rem;min-height: 25rem;">
+              <br><br>
+              <p class="card-text">Market Kshetra</p>
+              <a href="../register.html" class="btn btn-outline-success">Register Now</a>
+                            <a href="https://drive.google.com/file/d/0B_Q2Az3l_CIBTW51SERCbklxOTllNFdsaFpZemdxdm9NN0N3/view?usp=sharing" class="btn btn-success">Get RuleBook</a>
+            </div>
+            <div class="card-body text-center">
+              <img src="images/bullionbeatdown.png" class="card-img-top" style="max-height: 25rem;min-height: 25rem;">
+              <br><br>
+              <p class="card-text">Bullion Beatdown</p>
+              <a href="../register.html" class="btn btn-outline-success">Register Now</a>
+                            <a href="https://drive.google.com/file/d/0B_Q2Az3l_CIBTW51SERCbklxOTllNFdsaFpZemdxdm9NN0N3/view?usp=sharing" class="btn btn-success">Get RuleBook</a>
+            </div>
+            <div class="card-body text-center">
+              <img src="images/battleportfolio.jpg" class="card-img-top" style="max-height: 25rem;min-height: 25rem;">
+              <br><br>
+              <p class="card-text">Battle of Portfolios</p>
+              <a href="../register.html" class="btn btn-outline-success">Register Now</a>
+                            <a href="https://drive.google.com/file/d/0B_Q2Az3l_CIBTW51SERCbklxOTllNFdsaFpZemdxdm9NN0N3/view?usp=sharing" class="btn btn-success">Get RuleBook</a>
+            </div>
+            <div class="card-body text-center">
+              <img src="images/novatia.jpg" class="card-img-top" style="max-height: 25rem;min-height: 25rem;">
+              <br><br>
+              <p class="card-text">Novatia</p>
+              <a href="../register.html" class="btn btn-outline-success">Register Now</a>
+                            <a href="https://drive.google.com/file/d/0B_Q2Az3l_CIBTW51SERCbklxOTllNFdsaFpZemdxdm9NN0N3/view?usp=sharing" class="btn btn-success">Get RuleBook</a>
+            </div>
+            <div class="card-body text-center">
+              <img src="images/stockpitch.jpg" class="card-img-top" style="max-height: 25rem;min-height: 25rem;">
+              <br><br>
+              <p class="card-text">Stock Pitching Competition</p>
+              <a href="../register.html" class="btn btn-outline-success">Register Now</a>
+                            <a href="https://drive.google.com/file/d/0B_Q2Az3l_CIBTW51SERCbklxOTllNFdsaFpZemdxdm9NN0N3/view?usp=sharing" class="btn btn-success">Get RuleBook</a>
+            </div>
+          </div>
+      </div>
+      <div class="corporate-slider-nav text-center ml-auto mr-auto" style="width:50%;">
+          <div class="card" style="width: 18rem;">
+            <img src="images/marketkshetra.jpg" class="card-img-top" style="min-height: 12rem; max-height: 12rem;">
+          </div>
+          <div class="card" style="width: 18rem;">
+            <img src="images/bullionbeatdown.png" class="card-img-top" style="min-height: 12rem; max-height: 12rem;">
+          </div>
+          <div class="card" style="width: 18rem;">
+            <img src="images/battleportfolio.jpg" class="card-img-top" style="min-height: 12rem; max-height: 12rem;">
+          </div>
+          <div class="card" style="width: 18rem;">
+            <img src="images/novatia.jpg" class="card-img-top" style="min-height: 12rem; max-height: 12rem;">
+          </div>
+          <div class="card" style="width: 18rem;">
+            <img src="images/stockpitch.jpg" class="card-img-top" style="min-height: 12rem; max-height: 12rem;">
+          </div>
+      </div>
     </div>
-    <div class="card card-color-0">
-      <div class="border"></div>
-      <img src="./img/codejam.jpg" />
-      <h2>CodeJam</h2>
-    </div>
-    <div class="card card-color-0">
-      <div class="border"></div>
-      <img src="./img/ctf.jpg" />
-      <br>
-      <br>
-      <h2> BITS Capture The Flag</h2>
-    </div>
-    <div class="card card-color-0">
-      <div class="border"></div>
-      <img src="./img/reverse.jpg" />
-      <h2>Reverse Coding</h2>
-    </div>
-  </div>
-</div>
 
+    <div id="featured" class="sub-section">
+        <div class="text-center" style="font-size: 4em;">FEATURED</div>
+        <div class="card ml-auto mr-auto" style="width:50%;margin-bottom: 3%; height: 60%;">
+            <div class="card-body text-center">
+              <img src="images/cubix.jpg" class="card-img-top" id="card-image-featured" style="max-height: 25rem; min-height: 25rem;">
+              <br><br>
+              <p class="card-text" id="card-text-featured">Cubix</p>
+              <a href="../register.html" class="btn btn-outline-success">Register Now</a>
+                            <a href="https://drive.google.com/file/d/0B_Q2Az3l_CIBTW51SERCbklxOTllNFdsaFpZemdxdm9NN0N3/view?usp=sharing" class="btn btn-success">Get RuleBook</a>
+            </div>
+        </div>
+        <div style="display: flex;justify-content: center; align-items: center;">
+          <div class="card" style="width: 18rem;">
+            <img src="images/cubix.jpg" id="cubix" class="card-img-top" style="min-height: 12rem;max-height: 12rem;" alt="...">
+          </div>
+          <div class="card" style="width: 18rem;">
+            <img src="images/matka.jpg" id="matka" style="min-height: 12rem;max-height: 12rem;" class="card-img-top" alt="...">
+          </div>
+          <div class="card" style="width: 18rem;">
+            <img src="images/idrl.jpg" id="idrl" style="min-height: 12rem;max-height: 12rem;" class="card-img-top" alt="...">
+          </div>
+        </div>
+      </div>
 
+    <footer class="page-footer text-center font-small mt-4 wow fadeIn">
+      <hr class="my-4">
+      <!-- Social icons -->
+      <div class="pb-4">
+        <a href="https://www.facebook.com/bitsquark" target="_blank">
+          <i class="fab fa-facebook-f fa-3x mr-3"></i>
+        </a>
+        <a href="https://www.instagram.com/bitsquark/" target="_blank">
+          <i class="fab fa-instagram fa-3x mr-3"></i><!--insert link here-->
+        </a>
 
-<div class="container des1">
-  <h1 style="color: pink;font-size: 40px;" class='desHead'>DESIGN AND BUILD</h1>
-  <div class="card-column column-0 des">
-    <div class="card card-color-0">
-      <div class="border"></div>
-      <img src="./img/burnout.jpg" />
-      <h2>Burnout</h2>
-    </div>
-    <div class="card card-color-0">
-      <div class="border"></div>
-      <img src="./img/trailblazers.jpg" />
-      <h2>TrailBlazers</h2>
-    </div>
-    <div class="card card-color-0">
-      <div class="border"></div>
-      <img src="./img/searchandrescue.jpg" />
-      <h2>Search And Rescue</h2>
-    </div>
-    <div class="card card-color-0">
-      <div class="border"></div>
-      <img src="./img/Mortar Kombat.jpg" />
-      <h2>Mortal Kombat</h2>
-    </div>
-  </div>
-</div>
+        <a href="https://twitter.com/bitsquark?s=09" target="_blank">
+          <i class="fab fa-twitter fa-3x mr-3"></i><!--insert link here-->
+        </a>
+        <a href="http://www.youtube.com/c/QuarkBITSPilaniGoa" target="_blank">
+          <i class="fab fa-youtube fa-3x mr-3"></i><!--insert link here-->
+        </a>
+      </div>
+      <!--Copyright-->
+      <div class="footer-copyright py-3">
+        DEVELOPED BY DEVSOC, BITS PILANI K.K. BIRLA GOA CAMPUS
+      </div>
+      <!--/.Copyright-->
+    </footer>
 
-
-
-<div class="container special1">
-  <h1 style="color: pink;font-size: 40px;" class='specialHead'>SPECIALS</h1>
-  <div class="card-column column-0 special">
-    <div class="card card-color-0">
-      <div class="border"></div>
-      <img src="./img/open showcase.jpg" />
-      <h2>Open Showcase</h2>
-    </div>
-    <div class="card card-color-0">
-      <div class="border"></div>
-      <img src="./img/paperpresentation.jpg" />
-      <h2>Paper Presentation</h2>
-    </div>
-    <div class="card card-color-0">
-      <div class="border"></div>
-      <img src="./img/schoolbag.jpg" />
-      <br>
-      <h2>SchoolBags</h2>
-    </div>
-    <div class="card card-color-0">
-      <div class="border"></div>
-      <img src="./img/stratazenith.jpg" />
-      <h2>StrataZenith</h2>
-    </div>
-  </div>
-</div>
-
-
-<div class="container electrify1">
-  <h1 style="color: pink;font-size: 40px;" class='electrifyHead'>ELECTRIFY</h1>
-  <div class="card-column column-0 electrify">
-    <div class="card card-color-0">
-      <div class="border"></div>
-      <img src="./img/digilogica.gif" />
-      <h2>Digilogica</h2>
-    </div>
-    <div class="card card-color-0">
-      <div class="border"></div>
-      <img src="./img/ucmania.jpg" />
-      <h2>uC Mania</h2>
-    </div>
-  </div>
-</div>
-
-
-<div class="container cor1">
-  <h1 style="color: pink;font-size: 40px;" class='corHead'>CORPORATE</h1>
-  <div class="card-column column-0 cor centralize">
-    <div class="card card-color-0">
-      <div class="border"></div>
-      <img src="./img/Novatia.jpg" />
-      <h2>Novatia</h2>
-    </div>
-    <div class="card card-color-0">
-      <div class="border"></div>
-      <img src="./img/Market Kshetra.jpg" />
-      <h2>Market Kshetra</h2>
-    </div>
-    <div class="card card-color-0">
-      <div class="border"></div>
-      <img src="./img/battleportfolio.jpg" />
-      <h2>Battle Of Portfolios</h2>
-    </div>
-    <div class="card card-color-0">
-      <div class="border"></div>
-      <img src="./img/stockpitch.jpg" />
-      <h2>Stock Pitching Competition</h2>
-    </div>
-    <div class="card card-color-0">
-      <div class="border"></div>
-      <img src="./img/bullion beatdown.png" />
-      <h2>Bullion Beatdown</h2>
-    </div>
-  </div>
-</div>
-
-
-<div class="container matka1">
-  <h1 style="color: pink;font-size: 40px;" class='matkaHead'>MATKA</h1>
-  <div class="card-column column-0 matka">
-    <div class="card card-color-0">
-      <div class="border"></div>
-      <img src="./img/MATKA.jpg" />
-      <h2>Matka</h2>
-    </div>
-  </div>
-</div>
-
-<div class="container cubix1">
-  <h1 style="color: pink;font-size: 40px;" class='cubixHead'>CUBIX</h1>
-  <div class="card-column column-0 cubix">
-    <div class="card card-color-0">
-      <div class="border"></div>
-      <img src="./img/CUBIX.jpg" />
-      <h2>Cubix</h2>
-    </div>
-  </div>
-</div>
-
-<div class="container idrl1">
-  <h1 style="color: pink;font-size: 40px;" class='idrlHead'>IDRL</h1>
-  <div class="card-column column-0 idrl">
-    <div class="card card-color-0">
-      <div class="border"></div>
-      <img src="./img/idrl.jpg" />
-      <h2>IDRL</h2>
-    </div>
-  </div>
-</div>
-
-<footer class="page-footer text-center font-small mt-4 wow fadeIn">
-
-  <!--Call to action-->
-  <!-- <div class="pt-4">
-      <a class="btn btn-outline-white" href="https://mdbootstrap.com/docs/jquery/getting-started/download/" target="_blank"
-        role="button">Download MDB
-        <i class="fas fa-download ml-2"></i>
-      </a>
-      <a class="btn btn-outline-white" href="https://mdbootstrap.com/education/bootstrap/" target="_blank" role="button">Start
-        free tutorial
-        <i class="fas fa-graduation-cap ml-2"></i>
-      </a>
-    </div> -->
-  <!--/.Call to action-->
-
-  <hr class="my-4">
-
-  <!-- Social icons -->
-  <div class="pb-4">
-    <a href="https://www.facebook.com/mdbootstrap" target="_blank">
-      <i class="fab fa-facebook-f mr-3"></i>
-    </a>
-
-    <a href="https://www.facebook.com/mdbootstrap" target="_blank">
-      <i class="fab fa-instagram mr-3"></i>
-    </a>
-
-    <a href="https://twitter.com/MDBootstrap" target="_blank">
-      <i class="fab fa-twitter mr-3"></i>
-    </a>
-
-    <a href="https://www.youtube.com/watch?v=7MUISDJ5ZZ4" target="_blank">
-      <i class="fab fa-youtube mr-3"></i>
-    </a>
-
-  </div>
-  <!-- Social icons -->
-
-  <!--Copyright-->
-  <div class="footer-copyright py-3">
-    BITS-PILANI, K. K. BIRLA GOA CAMPUS
-  </div>
-  <!--/.Copyright-->
-
-</footer>
-
-<!-- <div class="container shutterup1">
-  <h1 style="color: pink;font-size: 40px;" class='shutterupHead'>SHUTTERUP</h1>
-  <div class="card-column column-0 shutterup">
-    <div class="card card-color-0">
-      <div class="border"></div>
-      <img src="./img/digilogica.gif" />
-      <h2>ShutterUp</h2>
-    </div>
-  </div>
-</div> -->
-
-
-<!-- <div class="container">
-  <h1 style="color: pink;font-size: 40px;" class='elixirHead'>MATKA</h1>
-
-  <h1 style="color: pink;font-size: 40px;" class='elixirHead'>CUBIX</h1>
-
-  <h1 style="color: pink;font-size: 40px;" class='elixirHead'>IDRL</h1>
-
-  <h1 style="color: pink;font-size: 40px;" class='elixirHead'>SHUTTER-UP</h1>
-</div> -->
-
-<!-- <div id="cover" class="cover"></div>
-
-<div id="open-content" class="open-content">
-  <a href="#" id="close-content" class="close-content"><span class="x-1"></span><span class="x-2"></span></a>
-  <img id="open-content-image" src="" />
-  <div class="text" id="open-content-text">
-  </div>
-</div> -->
-<!-- partial -->
+  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
   <script  src="./script.js"></script>
-
-
-</body>
+  </body>
 </html>
