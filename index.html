@@ -20,17 +20,20 @@
     .carousel {
       height: 100%;
     }
-
     @media (min-width: 800px) and (max-width: 850px) {
       .navbar:not(.top-nav-collapse) {
         background: #1C2331 !important;
       }
     }
-
+    .animate
+{
+    height: 0px;
+    transition: height 1s;
+}
   </style>
 </head>
 
-<body>
+<body style="background-color: black;">
 
   <!-- Navbar -->
   <nav class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar">
@@ -81,40 +84,60 @@
 
 
   <div class="view">
-            <video class="video-intro" autoplay muted height="100%">
-            <source src="./Quark Theme Animation [DoPy]_1.mp4" type="video/mp4"> </video>
+            <video class="video-intro" autoplay muted height="100%" id="mainVideo" style="background-color: black;">
+            <source src="./Quark Theme Animation [DoPy]_1.mp4" type="video/mp4" style="position: absolute;z-index: 1;"> </video>
+              <div class="view" style="position: relative; background-color: black;" id="afterVideo">
+              <img src="VJC.gif",style="object-fit: fill;" width="100%">
+              <img src="./img/logo.png",style="margin:auto;position:absolute;z-index:2;" width="50%">
+              <i class="fa fa-chevron-left" style="font-size:48px;position:absolute; margin: 1%; left:0;bottom:0;z-index: 2;color: white;"></i>
+              <i class="fa fa-chevron-right" style="font-size:48px;position:absolute; margin:1%;right:0;bottom:0;z-index: 2;color: white;"></i>
+
+              </div>
+
+            
   </div>
+  <script type='text/javascript'>
+    document.getElementById('mainVideo').addEventListener('ended',myHandler,false);
+    function myHandler(e) {
+//       $(document).ready(function(){
+        
+//         $.when($("#mainVideo").fadeOut())
+//                                .done(function() {
+//                                  $("#mainVideo").remove();
+//                                  $("#afterVideo").fadeIn();
+// });
+// });
+        fade(document.getElementById('mainVideo'));
+        unfade(document.getElementById('afterVideo'));
+    }
+    function fade(element) {
+    var op = 1;  // initial opacity
+    var timer = setInterval(function () {
+        if (op <= 0.1){
+            clearInterval(timer);
+            element.style.display = 'none';
+        }
+        element.style.opacity = op;
+        element.style.filter = 'alpha(opacity=' + op * 100 + ")";
+        op -= op * 0.1;
+    }, 50);
+}
+function unfade(element) {
+    var op = 0.1;  // initial opacity
+    element.style.display = 'block';
+    var timer = setInterval(function () {
+        if (op >= 1){
+            clearInterval(timer);
+        }
+        element.style.opacity = op;
+        element.style.filter = 'alpha(opacity=' + op * 100 + ")";
+        op += op * 0.01;
+    }, 10);
+}
+</script>
 
   <footer class="page-footer text-center font-small mt-4 fadeIn">
     <hr class="my-4">
-    <script id="vertexShader" type="x-shader/x-vertex">
-			uniform vec3 viewVector;
-			uniform float c;
-			uniform float p;
-			varying float intensity;
-			
-			void main({
-    			vec3 vNormal = normalize( normalMatrix * normal );
-				vec3 vNormel = normalize( normalMatrix * viewVector );
-				intensity = pow( c - dot(vNormal, vNormel), p );
-	
-    			gl_Position = projectionMatrix * modelViewMatrix * vec4( position, 1.0 );
-			}
-		</script>
-
-		<script id="fragmentShader" type="x-shader/x-fragment"> 
-			uniform vec3 glowColor;
-			varying float intensity;
-
-		void main() {
-			vec3 glow = glowColor * intensity;
-    		gl_FragColor = vec4( glow, 1.0 );
-		}
-		</script>
-<!-- partial -->
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/three.js/r63/three.min.js'></script>
-<script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/123941/orbitcontrols.js'></script><script  src="./js/script.js"></script>
-
     <!-- Social icons -->
     <div class="pb-4">
       <a href="https://www.facebook.com/bitsquark/" target="_blank">
